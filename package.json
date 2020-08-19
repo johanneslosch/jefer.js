@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js"
   },
   "repository": {
@@ -12,8 +13,8 @@
     "url": "git+https://github.com/johanneslosch/payceDiscordbot.js.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "johanneslosch",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/johanneslosch/payceDiscordbot.js/issues"
   },
