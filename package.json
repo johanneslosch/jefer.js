@@ -1,5 +1,5 @@
 {
-  "name": "paycedcbot.js",
+  "name": "jefer.js",
   "version": "1.0.0",
   "description": "[old bot](https://github.com/johanneslosch/payceDiscordBot)",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johanneslosch/payceDiscordbot.js.git"
+    "url": "git+https://github.com/johanneslosch/jefer.js.git"
   },
-  "keywords": [],
+  "keywords": ["discord", "bot", "mute-chat"],
   "author": "johanneslosch",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johanneslosch/payceDiscordbot.js/issues"
+    "url": "https://github.com/johanneslosch/jefer.js/issues"
   },
-  "homepage": "https://github.com/johanneslosch/payceDiscordbot.js#readme",
+  "homepage": "https://github.com/johanneslosch/jefer.js#readme",
   "dependencies": {
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0"
