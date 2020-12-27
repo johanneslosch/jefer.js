@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /usr/local/dev/paycedcbot.js
+WORKDIR /usr/local/dev/jefer.js
 
 COPY package.json ./
 

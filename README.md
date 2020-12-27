@@ -1,4 +1,4 @@
-# Payce DisordBot rewrite
+# JEFER.JS
 
 ## Getting started
 1. insert in .env 
@@ -7,3 +7,5 @@
     MUTE_CHAT_ROLE=<roleName>
     ```
 2. start docker container
+
+<strong>Don't miss mounting your .env file</strong>
