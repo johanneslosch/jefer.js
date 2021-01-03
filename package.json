@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/johanneslosch/jefer.js.git"
   },
-  "keywords": ["discord", "bot", "mute-chat"],
+  "keywords": [
+    "discord",
+    "bot",
+    "mute-chat"
+  ],
   "author": "johanneslosch",
   "license": "MIT",
   "bugs": {

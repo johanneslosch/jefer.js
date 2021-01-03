@@ -1,11 +1,7 @@
 # JEFER.JS
 
 ## Getting started
-1. insert in .env 
-    ```env
-    TOKEN=<botToken>
-    MUTE_CHAT_ROLE=<roleName>
-    ```
-2. start docker container
-
-<strong>Don't miss mounting your .env file</strong>
+1. invite bot to your server
+2. set mute role
+    `j!setMuteRole <role name>`
+3. use this bot
