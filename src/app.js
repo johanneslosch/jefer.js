@@ -13,11 +13,19 @@ client.on('message', message => {
         if(msg.content === 'setMuteRole' || 'setmuterole'){
             //console.log('test1')
             var newData = msg.substr('setMuteRole'.length + 1);
-            let data = newData
-            fs.writeFile('./guilds/' + message.guild.id + '.txt', data, (err) => { 
-                // In case of a error throw err. 
-                if (err) throw err; 
-            }) 
+                let data = newData
+            if(!fs.existsSync('./guilds/' + message.guild.id + '.txt')){
+                fs.writeFile('./guilds/' + message.guild.id + '.txt', data, (err) => { 
+                    // In case of a error throw err. 
+                    if (err) throw err; 
+                }) 
+            }
+            if(message.guild.ownerID == message.author.id){
+                fs.writeFile('./guilds/' + message.guild.id + '.txt', data, (err) => { 
+                    // In case of a error throw err. 
+                    if (err) throw err; 
+                }) 
+            }
         }
     }
   });
