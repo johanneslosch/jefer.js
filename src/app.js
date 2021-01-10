@@ -9,18 +9,15 @@ var prefix = 'j!'
 client.on('message', message => {
     if(message.content.startsWith(prefix)){
         var msg = message.content.substr(prefix.length)
-        //console.log(msg)
         if(msg.content === 'setMuteRole' || 'setmuterole'){
-            //console.log('test1')
             var newData = msg.substr('setMuteRole'.length + 1);
                 let data = newData
             if(!fs.existsSync('./guilds/' + message.guild.id + '.txt')){
                 fs.writeFile('./guilds/' + message.guild.id + '.txt', data, (err) => { 
-                    // In case of a error throw err. 
                     if (err) throw err; 
                 }) 
             }
-            if(message.guild.ownerID == message.author.id){
+            else if(message.guild.me.hasPermission('MANAGE_GUILD')){
                 fs.writeFile('./guilds/' + message.guild.id + '.txt', data, (err) => { 
                     // In case of a error throw err. 
                     if (err) throw err; 
