@@ -11,13 +11,21 @@ client.on('message', message => {
         var msg = message.content.substr(prefix.length)
         if(msg.content === 'setMuteRole' || 'setmuterole'){
             var newData = msg.substr('setMuteRole'.length + 1);
-                let data = newData
+            let data = newData;
+
+            if(data.startsWith('<@')){
+                const myRole = client.guilds.cache.get(message.guild.id)
+                .roles.cache.find(role => role.id === data.replace('<@', '').replace('>', '').replace('&', ''));
+                data = myRole.name;
+            }
+
             if(!fs.existsSync('./guilds/' + message.guild.id + '.txt')){
                 fs.writeFile('./guilds/' + message.guild.id + '.txt', data, (err) => { 
                     if (err) throw err; 
                 }) 
             }
             else if(message.guild.me.hasPermission('MANAGE_GUILD')){
+                
                 fs.writeFile('./guilds/' + message.guild.id + '.txt', data, (err) => { 
                     // In case of a error throw err. 
                     if (err) throw err; 
@@ -25,7 +33,7 @@ client.on('message', message => {
             }
         }
     }
-  });
+});
 
 client.on("voiceStateUpdate", function(oldMember, newMember){
     const mute_role = fs.readFileSync('./guilds/' + oldMember.guild.id + '.txt').toString() || 'talk'
